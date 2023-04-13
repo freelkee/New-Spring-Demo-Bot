@@ -2,61 +2,26 @@ package com.example.newspringdemobot.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.sql.Timestamp;
 
-@Entity(name= "usersDataTable")
+@Getter
+@Setter
+@Entity(name = "usersDataTable")
 public class User {
     @Id
     private Long chatId;
 
     private String firstName;
     private String lastName;
-    private  String userName;
+    private String userName;
     private Timestamp registeredAt;
 
     public User() {
     }
 
-    public Long getChatId() {
-        return chatId;
-    }
-
-    public void setChatId(Long chatId) {
-        this.chatId = chatId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firsName) {
-        this.firstName = firsName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public Timestamp getRegisteredAt() {
-        return registeredAt;
-    }
-
-    public void setRegisteredAt(Timestamp registeredAt) {
-        this.registeredAt = registeredAt;
-    }
 
     @Override
     public String toString() {
